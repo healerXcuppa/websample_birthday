@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 42nd Birthday Mom!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- background effects -->
+    <div class="particles" id="particles"></div>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <div class="birthday-card">
+            <!-- balloon decorations -->
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+
+            <h1>Happy Birthday Mom!</h1>
+            <p class="age-text">Celebrating 42 Years of Age!</p>
+
+            <div class="cake">🎂</div>
+
+            <div class="photo-gallery">
+                <div class="gallery-title">Beautiful Memories with You Mom</div>
+                
+                <div class="slideshow-container" id="slideshowContainer">
+                    <div class="slide active">
+                        <img src="Assets/mom1.jpg" alt="Mom photo 1">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom2.jpg" alt="Mom photo 2">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom3.jpg" alt="Mom photo 3">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom4.jpg" alt="Mom photo 4">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom5.jpg" alt="Mom photo 5">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom6.jpg" alt="Mom photo 6">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/mom7.jpg" alt="Mom photo 7">
+                    </div>
+
+                    <!-- navigation buttons -->
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+
+                <!-- dots for each photo -->
+                <div class="dots-container" id="dotsContainer"></div>
+            </div>
+
+            <div class="wishes">
+                <p>Dear Mom,</p>
+                <p>Happy 42nd Birthday to the most incredible woman in our life! We can't believe how fast time flies, but every year with you has been a blessing.</p>
+                <p>Thank you for all the sacrifices you've made for us, for staying up late when we were sick, for believing in us even when we doubted ourselves, and for loving us unconditionally through everything.</p>
+                <p>You've taught us what strength looks like, what kindness mean, and how to face life with courage and grace. We are so proud to be your children.</p>
+                <p>Mom, you deserve the world and so much more. We hope this year brings you all the happiness, peace, and joy that you've given to us throughout our lives.</p>
+                <p>We love you more than words can express. Here's to 42 years of you being absolutely amazing, and to many more years of health, happiness, and beautiful memories together.</p>
+                
+                <div class="signature">Forever your loving family 💙</div>
+            </div>
+
+            <!-- music player controls -->
+            <div class="music-controls">
+                <button class="music-control" id="playPauseBtn" onclick="toggleMusic()">
+                    🎵 Play Birthday Song
+                </button>
+                <div class="volume-control">
+                    <span>🔊</span>
+                    <input type="range" id="volumeControl" min="0" max="100" value="70" onchange="changeVolume(this.value)">
+                </div>
+                <span class="music-status" id="musicStatus">Ready</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="birthdayMusic" loop preload="auto">
+        <source src="Assets/shatta-wale-birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
